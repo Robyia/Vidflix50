@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Terms and Condition</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+	<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+	<script src="{% static 'js/script.js' %}"></script>
+
+	<style>
+		#bcolor {
+		background-color: #000000;
+		}
+	</style>
+
+
+</head>
+<body id="bcolor">
+	<div class="wrapper">
+
+		<header class="header">
+			<nav class="menu">
+				<ul>
+					<li><a href="{% url 'index' %}" style="padding-top:12px;"><h1><b>Vidflix</b></h1></a></li>
+					<li><a href="{% url 'index' %}">Home</a></li>
+					<li><a>Category</a>
+
+					    <ul>
+						{% for lang in category %}
+						<li><a href="{% url 'category' lang.id %}">{{lang.name}}</a></li>
+						{% empty %}
+						<li><a href="#">not available</a></li>
+						{% endfor %}
+						</ul>
+					</li>
+
+
+
+					<li><a>Language</a>
+						<ul>
+							{% for lang in language %}
+						<li><a href="{% url 'language' lang.id %}">{{lang.name}}</a></li>
+						{% empty %}
+						<li><a href="#">not available</a></li>
+						{% endfor %}
+
+						</ul>
+					</li>
+
+					{% if request.user.is_authenticated %}
+				<li style="padding-left: 60px;"><a href="">Hi {{request.user}}</a></li>
+				<li><a href="{% url 'logout' %}">logout</a></li>
+				{% else %}
+				<li><a href="{% url 'login' %}">login</a></li>
+				<li><a href="{% url 'signup' %}">signup</a></li>
+				{% endif %}
+			</ul>
+		</nav>
+
+
+
+
+		<main class="content">
+			<section class="centered">
+				<h3>Terms and Conditions</h3>
+				<div class="textcontent">
+					<p>
+						Vidflix grants you a limited, non-exclusive, revocable and non-transferable licence to display the Vidflix Assets in accordance with these Terms. All use by you of Vidflix Assets (including any goodwill associated therewith) shall inure to the benefit of Vidflix. You agree that You shall not challenge, or assist others to challenge, the Vidflix Assets or the registration or ownership thereof by Vidflix (except to the extend such restriction is prohibited by applicable law), or attempt to register any Vidflix Assets or other anmes, logos, marks, or materials (including domain names) that are confusingly similar in any way (including but not limited to, sound, appearance and spellings) to any Vidflix Assets.
+					</p>
+					<p>
+						The Vidflix Assets are provided "as is" and and Netflix disclaims all express and implied warranties, including warranties of noninfringement. Vidflix shall not be liable to You under any theory of liability for any direct, indirect, incidental, special,consequential, punitive, exemplary or other damages arising out of the Vidflix Assets or Your use thereof.This limitation shall apply even if Vidflix was advised of, or should have aware of, the possibility of such damages. Some jurisdictions do not allow certain exclusions or limitations; in such jurisdictions, the exclusions and limitations stated in these Terms shall apply to You to the maximum extent permitted by law. Nothing herein grants You any right, title or interest in or to the Vidflix Media Center Assets.
+					</p>
+					<p>
+						Vidflix will interpret Your compliance with these Terms in its sole discretion. Vidflix may modify or terminate Your permission to display or use the Vidflix Assets at any time. Vidflix may take action against any use of the Vidflix Assets that does not comply with these Terms or written permission from Vidflix, infringes any Vidflix owned or licensed intellectual property or other right, or violates applicable law.
+					</p>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+
+	
+
+</div>
+</body>
+</html>

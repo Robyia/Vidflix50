@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show payment page</title>
+</head>
+<body>
+<center>
+    <h1>Redirecting to the merchant!!!</h1>
+    <h1>please do not refresh this page..</h1>
+</center>
+<form action="https://securegw-stage.paytm.in/order/process" method="post" name="paytm">
+<!--    <table border="1"> -->
+<!--        <tbody>-->
+<!--        <input type="hidden" name="mid" value="YOUR_MID_HERE">-->
+<!--        <input type="hidden" name="orderId" value="YOUR_ORDERID_HERE">-->
+<!--        <input type="hidden" name="txnToken" value="YOUR_TXNTOKEN_HERE">-->
+<!--        </tbody>-->
+<!--    </table> -->
+    {% for key,value in params.items %}
+    <input type="hidden" name="{{key}}" value="{{value}}">
+
+    {% endfor %}
+</form>
+
+</body>
+<script> document.paytm.submit()</script>
+
+</html>

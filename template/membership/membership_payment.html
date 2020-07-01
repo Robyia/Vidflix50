@@ -1,0 +1,58 @@
+{% extends 'course/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+<h1>Payment</h1>
+
+<p>Selected membership: {{ selected_membership }}</p>
+<p>Price: <strong>${{ selected_membership.price }}</strong><small>/month</small></p>
+
+
+<button onclick="toggleDisplay();"  style="width: 100%;">Checkout with a credit card</button>
+
+
+
+
+  <!-- can't do this -->
+  <!-- <script src="{% static 'js/stripeV3.js' %}"></script> -->
+
+  <form action="." method="post" id="payment-form">
+    {% csrf_token %}
+
+      <label for="card-element">
+        Credit or debit card
+      </label>
+
+      <!-- Used to display form errors. -->
+
+
+    <button>Submit Payment</button>
+  </form>
+  
+
+
+<div id="stripe-token-handler" class="is-hidden">Success! Got token: <span class="token"></span></div>
+
+<!-- script for the stripe form -->
+<script src="{% static 'js/checkout.js' %}"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<!-- script for toggling display of the form -->
+<script type="text/javascript">
+    function toggleDisplay() {
+      var x = document.getElementById("collapseStripe");
+      if (x.style.display === "none") {
+          x.style.display = "block";
+      } else {
+          x.style.display = "none";
+      }
+    };
+</script>
+
+
+{% endblock content %}

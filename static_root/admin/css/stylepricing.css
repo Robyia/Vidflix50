@@ -1,0 +1,180 @@
+$heading-color1: #009342;
+$price-color1: #30B643;
+
+$pop-heading-color: #FF9138;
+$pop-price-color: #FEB63D;
+$pop-savings-color: #F7CD6F;
+
+$heading-color3: #018FFF;
+$price-color3: #39B5FF;
+$savings-color3: #65CAFC;
+
+body {
+  padding: 4em 0;
+  background-image: url("backimg.jpg");
+  background-color: #cccccc;
+}
+
+#prices {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  font-family: 'open sans';
+  font-weight: normal;
+}
+
+.pricing-table {
+  width: 95%;
+  margin: auto auto 20px auto;
+  position: relative;
+  min-height: 340px;
+  padding-bottom: 55px;
+  text-align: center;
+  background: #fff;
+}
+
+.pricing-table td {
+  width: 33%;
+  vertical-align: top;
+}
+
+.pricing-table h2 {
+  display: block;
+  margin-bottom: 0px;
+  padding: 10px;
+  font-size: 1.4em;
+  background: #009342;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+#prices td:last-child h2 {
+  background: #018FFF;
+}
+
+.pricing-table h3 {
+  display: block;
+  margin: 0;
+  padding: 0 0 10px;
+  background: #102e5c;
+  font-size: 0.9em;
+}
+
+#prices td:last-child h3 {
+background: #018FFF;
+}
+
+.pricing-table h4 {
+display: block;
+margin: 0;
+width: 100%;
+padding: 20px;
+background: #30B643;
+font-size: 1.75em;
+box-sizing: border-box;
+}
+
+#prices td:last-child h4 {
+  background: #39B5FF;
+}
+
+.pricing-table h5 {
+  display: block;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+  padding: 10px;
+  background: #44D354;
+}
+
+#prices td:last-child h5 {
+  background: #65CAFC;
+}
+
+.pricing-table h2,
+.pricing-table h3,
+.pricing-table h4,
+.pricing-table h5 {
+  color: #fff;
+}
+
+/* Standard Table */
+
+.standard .pricing-table {
+  margin-top: -10px;
+  min-height: 400px;
+}
+
+.standard .pricing-table h2 {
+  font-size: 1.8em;
+  background: #FF9138;
+}
+
+.standard .pricing-table h3 {
+  background: #FF9138;
+}
+
+.standard .pricing-table h4 {
+  background: #FEB63D;
+}
+
+.standard .pricing-table h5 {
+  background: #F7CD6F;
+}
+
+.pricing-table p {
+  margin: 10px auto;
+  padding: 5px 0 5px;
+  width: 80%;
+  font-weight:300;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.pricing-table h5 + p {
+  border-top: 1px solid rgba(0,0,0,0);
+}
+
+.pricing-table a {
+  display: block;
+  margin: auto;
+  width: 45%;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  font-size: 0.85em;
+  color: #fff;
+  background: #2F333C;
+  text-decoration: none;
+  text-transform: uppercase;
+  // border-radius: 3px;
+  transition: all .3s ease-in-out;
+}
+
+.standard .pricing-table a {
+  background: #2F333C;
+}
+
+.pricing-table a:hover {
+  background: #505A6B;
+}
+
+/*------------------------------------*/
+/*---------- MEDIA QUERIES -----------*/
+/*------------------------------------*/
+
+@media screen and (max-width: 700px) {
+  #prices td {
+    display: block !important;
+    width: 100% !important;
+  }
+  .pricing-table {
+    min-height: 0;
+  }
+  .standard .pricing-table {
+    margin-top: 0px;
+  }
+}
+
+
+

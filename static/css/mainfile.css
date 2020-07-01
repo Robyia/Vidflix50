@@ -1,0 +1,193 @@
+.navbar {
+  background-color: black;
+}
+
+.min-height {
+  min-height: 85vh;
+}
+.min-height1 {
+  min-height: 100vh;
+}
+
+.min-height2 {
+  min-height: 30vh;
+}
+/* .text1{
+font-family: 'Special Elite', cursive;
+} */
+
+.h1text {
+  font-size: 2.4rem;
+  color: orange;
+}
+.text2 {
+  font-size: 1.6rem;
+}
+
+.stream {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url(img/chair1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.carousel-inner {
+  border-radius: 6rem;
+  
+  
+}
+.carousel-inner1 {
+  border-radius: 6.2rem;
+}
+
+.pa1 {
+  font-size: 1.3rem;
+}
+
+.title_page {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(151, 23, 23, 0.7)),
+    url(img/collage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+.abt-img1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(151, 23, 23, 0.7)),
+    url(img/collage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about-text {
+  background: linear-gradient(to top, rgba(10, 4, 4, 0.7), rgba(5, 2, 2, 0.5));
+}
+
+.hide {
+  visibility: hidden;
+}
+
+/* footer */
+
+#footer {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 6)),
+    url(img/ebee.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+.btn1 {
+  width: 15rem;
+  font-size: 1.2rem;
+}
+
+/* CONTACT PAGE */
+
+.contactUs{
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(151, 23, 23, 0.7)),url(img/collage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.banner{
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url(img/pexels-photo-955081.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  }
+  .cardBg{
+    background: linear-gradient(to top, rgba(10, 4, 4, 0.7), rgba(5, 2, 2, 0.5));
+    
+  }
+
+  .border{
+    border-radius: 6rem;
+    border:none;  
+  }
+
+  .imgBorder{
+    border-top: 6rem ;
+  }
+  .card{
+    border:none;
+  }
+  .play{
+    font-size:1rem;
+    font-weight: lighter;
+  }
+  .teamcard{
+width: 10rem;
+  }
+
+.title-underline{
+    width:200px;
+    height:6px;
+    margin:0 auto;
+}
+ .carousel2{
+    background-color: #000;
+}
+
+  .carousel.carousel-fade .carousel-item {
+    display:block;
+    opacity: 0;
+    transition: opacity ease 1.5s;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.carousel.carousel-fade .carousel-item.active {
+    opacity: 1 !important;
+}
+.carousel.carousel-fade .carousel-item:first-child {
+    top: auto;
+    position: relative;
+    transition: opacity ease-out 1.7s;
+}
+.carousel.carousel-fade .carousel-item:second-child {
+    top: auto;
+    position: relative;
+    transition: opacity ease-out 1.7s;
+}
+
+
+ .carousel img {
+    opacity: 0.8;
+    filter: alpha(opacity=50);
+    
+} 
+
+  /* signup */
+
+
+
+
+
+  .card-bg{
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+
+  box-shadow: 0 4px 8px 0 rgba(168, 23, 23, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+
+  .reg-btn{
+  box-shadow: 0px 4px 8px 0px rgba(216, 45, 45, 0.2), 0px 6px 20px 0 rgba(5, 2, 163, 0.19);
+
+  }
+  .register:hover{
+  color:red;
+  }
+

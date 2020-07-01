@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>pricing plan</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+	<script src="{% static 'js/script.js' %}"></script>
+
+	<link rel="stylesheet" href="{% static 'css/stylepricing.css' %}">
+
+    <style>
+		#bcolor {
+		background-color: #000000;
+		}
+	</style>
+
+
+
+</head>
+
+<script>
+window.console= window.console || function(t) {};
+</script>
+<script>
+if(document.location.search.match(/type=embed/gi))
+{
+window.parent.postmessage("resize","*");
+}
+</script>
+
+
+<body id="bcolor">
+
+	<div class="wrapper">
+        <header class="header">
+            <nav class="menu">
+				<ul>
+					<li><a href="{% url 'index' %}" style="padding-top:12px;"><h1><b>Vidflix</b></h1></a></li>
+                </ul>
+            </nav>
+
+            <h1 style="color:#FFFFFF; text-align:center"> Buy Plan </h1>
+
+
+
+    <main class="content">
+        <section class="centered">
+
+
+            <table id="prices">
+                <tbody>
+                <tr>
+                    <td class="standard">
+                        <div class="pricing-table">
+                            <h2>Basic</h2>
+                            <h4>INR 199</h4>
+                            <h5>standard</h5>
+                            <p>limited movies and TV Shows</p>
+                            <p>trial pack</p>
+                            <p>HD available</p>
+                            <p>Cancel at any time</p>
+
+                            <a href="showpaytm">Choose</a> </div>
+                    </td>
+
+
+
+                    <td class="standard">
+                        <div class="pricing-table">
+                            <h2>Unlimited</h2>
+                            <h4>INR 299</h4>
+                            <h5>Elite</h5>
+                            <p>Unlimited movies and TV Shows</p>
+                            <p>new movies every month</p>
+                            <p>UltraHD available</p>
+                            <p>Cancel at any time</p>
+
+                            <a href="showpaytm">Choose</a> </div>
+
+                    </td>
+
+
+                </tr>
+                </tbody>
+            </table>
+
+            <script id="rendered-js">
+$(document).ready(function() {
+$('#prices td').wrapInner('div class="pricing-table" />);
+});
+</script>
+
+
+        </section>
+    </main>
+</header>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+	<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+	<script src="{% static 'js/script.js' %}"></script>
+
+	<style>
+		#bcolor {
+		background-color: #000000;
+		}
+	</style>
+
+
+</head>
+<body id="bcolor">
+<div class="wrapper">
+
+	<header class="header">
+		<nav class="menu">
+			<ul>
+				<li><a href="{% url 'index' %}" style="padding-top:12px;"><h1><b>Vidflix</b></h1></a></li>
+				<li><a href="{% url 'index' %}">Home</a></li>
+				<li><a>Category</a>
+					<ul>
+						{% for lang in category %}
+						<li><a href="{% url 'category' lang.id %}">{{lang.name}}</a></li>
+						{% empty %}
+						<li><a href="#">not available</a></li>
+						{% endfor %}
+					</ul>
+				</li>
+
+				<li><a>Language</a>
+					<ul>
+						{% for lang in language %}
+						<li><a href="{% url 'language' lang.id %}">{{lang.name}}</a></li>
+						{% empty %}
+						<li><a href="#">not available</a></li>
+						{% endfor %}
+					</ul>
+				</li>
+
+
+				{% if request.user.is_authenticated %}
+				<li style="padding-left: 60px;"><a href="">Hi {{request.user}}</a></li>
+				<li><a href="{% url 'logout' %}">logout</a></li>
+				{% else %}
+				<li><a href="{% url 'login' %}">login</a></li>
+				<li><a href="{% url 'signup' %}">signup</a></li>
+				{% endif %}
+			</ul>
+		</nav>
+
+
+
+		<main class="content">
+			<section class="centered">
+
+				<h3>ABOUT</h3>
+				<div class="textcontent">
+					<p>
+						What is Vidflix? <br>
+						Vidflix is a subscription based streaming service which offers online streaming of library of films and TV shows. it allows our members to watch a wide variety of movies of different categories and languages on internet-connected devices. There's always something new to discover and moreTV shows and movies are added every month!
+					</p>
+					<p>
+						Membership <br>
+
+						<br>pick your price, pick your plan!
+						<br>Vidflix offers 2 membership plans to suite your needs.
+						<br>Basic plan: limited movies and TV shows will be there if you choose Basic plan.
+						<br>Unlimited Plan: Unlimited movies and TV shows will be there if you choose unlimited plan.
+
+						<br>As a member of Netflix, you'll be billed once a month on the date that you originally signed up.
+
+					</p>
+					<p>Get Started!
+
+						<br>Follow these easy steps to start watching Vidflix today:
+
+						<br>1. Create an account by entering your email address and creating a password.
+
+						<br>2. Choose the membership plan that�s right for you.
+
+						<br>3. Enter a payment method.
+
+						<br>4.That's it. Stream on!
+
+						<br>As a member of Vidflix, you'll be billed once a month on the date you originally signed up. If you decide Vidflix isn't for you, you always have the option to cancel online, anytime.
+					</p>
+				</div>
+
+			</section>
+
+		</main>
+	</header>
+</div>
+</body>
+</html>
